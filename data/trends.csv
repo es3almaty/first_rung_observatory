@@ -1,0 +1,20 @@
+series_id,series,period,value,unit,source,url
+uk-vacancies,UK vacancies,May–Jul 2025,727,000s,Office for National Statistics,https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/bulletins/jobsandvacanciesintheuk/august2026
+uk-vacancies,UK vacancies,Jun–Aug 2025,737,000s,Office for National Statistics,https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/bulletins/jobsandvacanciesintheuk/august2026
+uk-vacancies,UK vacancies,Jul–Sep 2025,729,000s,Office for National Statistics,https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/bulletins/jobsandvacanciesintheuk/august2026
+uk-vacancies,UK vacancies,Aug–Oct 2025,728,000s,Office for National Statistics,https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/bulletins/jobsandvacanciesintheuk/august2026
+uk-vacancies,UK vacancies,Sep–Nov 2025,730,000s,Office for National Statistics,https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/bulletins/jobsandvacanciesintheuk/august2026
+uk-vacancies,UK vacancies,Oct–Dec 2025,739,000s,Office for National Statistics,https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/bulletins/jobsandvacanciesintheuk/august2026
+uk-vacancies,UK vacancies,Nov–Jan 2026,734,000s,Office for National Statistics,https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/bulletins/jobsandvacanciesintheuk/august2026
+uk-vacancies,UK vacancies,Dec–Feb 2026,725,000s,Office for National Statistics,https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/bulletins/jobsandvacanciesintheuk/august2026
+uk-vacancies,UK vacancies,Jan–Mar 2026,718,000s,Office for National Statistics,https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/bulletins/jobsandvacanciesintheuk/august2026
+uk-vacancies,UK vacancies,Feb–Apr 2026,713,000s,Office for National Statistics,https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/bulletins/jobsandvacanciesintheuk/august2026
+uk-vacancies,UK vacancies,Mar–May 2026,710,000s,Office for National Statistics,https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/bulletins/jobsandvacanciesintheuk/august2026
+uk-vacancies,UK vacancies,Apr–Jun 2026,711,000s,Office for National Statistics,https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/bulletins/jobsandvacanciesintheuk/august2026
+uk-vacancies,UK vacancies,May–Jul 2026,707,000s,Office for National Statistics,https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/bulletins/jobsandvacanciesintheuk/august2026
+stanford-gap,Young-worker AI exposure gap,Jul 2025 data vintage,15,%,Stanford Digital Economy Lab,https://digitaleconomy.stanford.edu/news/canariesaug26/
+stanford-gap,Young-worker AI exposure gap,Jun 2026,19,%,Stanford Digital Economy Lab,https://digitaleconomy.stanford.edu/news/canariesaug26/
+fed-graduates,US recent-graduate outcomes — Unemployment,2026 Q1,5.7,%,Federal Reserve Bank of New York,https://www.newyorkfed.org/research/college-labor-market
+fed-graduates,US recent-graduate outcomes — Unemployment,2026 Q2,5.6,%,Federal Reserve Bank of New York,https://www.newyorkfed.org/research/college-labor-market
+fed-graduates,US recent-graduate outcomes — Underemployment,2026 Q1,41.5,%,Federal Reserve Bank of New York,https://www.newyorkfed.org/research/college-labor-market
+fed-graduates,US recent-graduate outcomes — Underemployment,2026 Q2,42.0,%,Federal Reserve Bank of New York,https://www.newyorkfed.org/research/college-labor-market

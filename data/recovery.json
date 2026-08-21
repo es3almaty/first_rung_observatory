@@ -1,0 +1,57 @@
+{
+  "title": "UK relative-recovery test",
+  "updated": "2026-08-18",
+  "reading": "Broad hiring shows tentative stabilization, while graduate and first-job routes remain weaker. That divergence is suggestive, not yet decisive.",
+  "broad_market": [
+    {
+      "label":"ONS vacancies",
+      "metric":"707k",
+      "change":"-2.7% YoY",
+      "status":"mixed",
+      "detail":"May–July 2026 vacancies were 707,000, down 19,000 from a year earlier but broadly flat through 2026.",
+      "url":"https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/bulletins/jobsandvacanciesintheuk/august2026"
+    },
+    {
+      "label":"REC active postings",
+      "metric":"1.67m",
+      "change":"+7.7% YoY",
+      "status":"recovery",
+      "detail":"REC reported 1.67 million active postings in July 2026, while cautioning that many entry-level opportunities had not recovered to the same extent.",
+      "url":"https://www.rec.uk.com/our-view/news/press-releases/labour-market-tracker-summer-jobs-comeback-year-year-rise-seasonal-hiring-rec"
+    },
+    {
+      "label":"Permanent placements",
+      "metric":"Stabilized",
+      "change":"Jul 2026",
+      "status":"recovery",
+      "detail":"The KPMG/REC Report on Jobs said permanent placements stabilized after 45 consecutive months of decline.",
+      "url":"https://kpmg.com/uk/en/media/press-releases/2026/08/kpmg-and-rec-uk-report-on-jobs.html"
+    }
+  ],
+  "first_rung": [
+    {
+      "label":"Graduate postings",
+      "metric":"-7%",
+      "change":"YoY",
+      "status":"strain",
+      "detail":"Indeed reported graduate postings around 7% below a year earlier and at their weakest point for this time of year since 2020.",
+      "url":"https://hiringlab.indeed.com/uk/blog/2026/08/03/mid-year-uk-jobs-hiring-trends-report/"
+    },
+    {
+      "label":"Summer jobs",
+      "metric":"4-year low",
+      "change":"Aug 2026",
+      "status":"strain",
+      "detail":"Indeed reported summer-job postings at a four-year low, weakening another route through which young people gain workplace experience.",
+      "url":"https://hiringlab.indeed.com/uk/blog/2026/08/03/mid-year-uk-jobs-hiring-trends-report/"
+    },
+    {
+      "label":"LinkedIn entry hiring",
+      "metric":"Mixed",
+      "change":"5 markets",
+      "status":"mixed",
+      "detail":"Across five countries, entry-level hiring was only modestly weaker than overall hiring, but junior hiring in AI-augmented occupations ran 3–10 percentage points below occupation-wide hiring.",
+      "url":"https://delivery-p143253-e1476319.adobeaemcloud.com/adobe/assets/urn:aaid:aem:ef153078-1061-4817-82e7-a1c027d7a7d7/original/as/AI-Labor-Market-Update-August-2026-v2.pdf"
+    }
+  ]
+}

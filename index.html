@@ -15,6 +15,7 @@
     </a>
     <nav>
       <a href="#overview">Overview</a>
+      <a href="#trends">Trends</a>
       <a href="#threshold">Threshold</a>
       <a href="#ladder">First rung</a>
       <a href="#evidence">Evidence</a>
@@ -52,6 +53,50 @@
         <article><span>03</span><h3>Redesign is wider than replacement</h3><p>Employer evidence points to rapid task and role change. Some substitution has begun, but wholesale entry-level collapse is not the modal finding.</p></article>
         <article><span>04</span><h3>The first rung is the strategic issue</h3><p>The risk is not only fewer jobs. It is fewer opportunities to enter, learn through work and become the experienced workers firms later expect to hire.</p></article>
       </div>
+    </section>
+
+    <section class="section pulse" id="trends">
+      <div class="section-head split">
+        <div><span class="kicker">PHASE 2 · LIVE SIGNAL MONITOR</span><h2>Watch the first rung move</h2></div>
+        <p>The Observatory now separates a genuine time series from shorter-run signal updates. The aim is to make recovery, divergence and falsification visible without collapsing unlike indicators into a single score.</p>
+      </div>
+      <div class="pulse-grid">
+        <article class="chart-card chart-card-main">
+          <div class="chart-topline">
+            <div><span class="micro">UK LABOUR DEMAND</span><h3 id="ukVacTitle">UK vacancies</h3><p id="ukVacSubtitle">Three-month rolling average, thousands</p></div>
+            <div class="chart-metric"><b id="ukVacLatest">707k</b><span id="ukVacDelta">-2.7% YoY</span></div>
+          </div>
+          <div class="chart-controls" role="group" aria-label="UK vacancy chart options">
+            <button class="chart-toggle active" data-chart-mode="level">Level</button>
+            <button class="chart-toggle" data-chart-mode="index">Index</button>
+            <button class="chart-toggle active" data-chart-range="all">13 periods</button>
+            <button class="chart-toggle" data-chart-range="6">Last 6</button>
+          </div>
+          <div class="svg-chart-wrap"><svg id="ukVacChart" class="svg-chart" viewBox="0 0 760 330" role="img" aria-label="UK vacancy trend"></svg><div id="chartTooltip" class="chart-tooltip" hidden></div></div>
+          <div class="chart-footer"><p id="ukVacNote"></p><a id="ukVacSource" target="_blank" rel="noopener">ONS source ↗</a></div>
+        </article>
+        <div class="signal-stack">
+          <article class="signal-card" id="stanfordCard">
+            <span class="micro">AI-EXPOSURE SIGNAL</span>
+            <div class="signal-head"><h3>Young-worker gap</h3><b>15% → 19%</b></div>
+            <div class="mini-bridge"><i></i><i></i><span></span></div>
+            <p>Kept-pace shortfall for ages 22–25 in highly AI-exposed occupations, July 2025 data vintage to June 2026.</p>
+            <small>Descriptive, not causal.</small>
+          </article>
+          <article class="signal-card">
+            <span class="micro">US GRADUATE OUTCOMES</span>
+            <div class="dual-metric"><div><b id="fedUnemp">5.6%</b><span>unemployment</span></div><div><b id="fedUnder">42.0%</b><span>underemployment</span></div></div>
+            <p id="fedNote">Recent-graduate outcomes remained difficult in 2026 Q2.</p>
+            <a id="fedSource" target="_blank" rel="noopener">New York Fed ↗</a>
+          </article>
+          <article class="signal-card signal-card-dark">
+            <span class="micro">READING DISCIPLINE</span>
+            <h3>Do not make unlike series pretend to agree.</h3>
+            <p>Vacancies, payrolls, employer surveys and AI-exposure measures answer different questions. Convergence matters precisely because the measures are different.</p>
+          </article>
+        </div>
+      </div>
+      <div class="trend-downloads"><a class="btn small" href="data/trends.csv" download>Download trend data CSV</a><a class="btn small" href="data/trends.json" target="_blank">View trend JSON</a></div>
     </section>
 
     <section class="section threshold" id="threshold">
@@ -123,15 +168,31 @@
       <div class="ledger" id="ledger" aria-live="polite"></div>
     </section>
 
-    <section class="section recovery">
+    <section class="section recovery" id="recovery">
       <div class="section-head split">
-        <div><span class="kicker">FALSIFICATION MONITOR</span><h2>What would change the view?</h2></div>
-        <p>The next diagnostic is relative recovery. A structural interpretation should strengthen only if entry-level hiring remains weak after the wider labour market stabilizes.</p>
+        <div><span class="kicker">RELATIVE-RECOVERY MONITOR</span><h2>Is the first rung recovering with the wider market?</h2></div>
+        <p>The structural interpretation strengthens only if junior and graduate routes remain weak as aggregate hiring stabilizes. This monitor keeps those two lanes separate.</p>
       </div>
-      <div class="recovery-grid">
-        <article class="recover-card"><span>IF THIS HAPPENS</span><h3>Aggregate hiring recovers; junior hiring remains weak</h3><p>Structural entry-level pressure becomes more plausible. Track graduate, junior and early-career hiring against the wider market.</p><b>Strengthens the case</b></article>
-        <article class="recover-card"><span>IF THIS HAPPENS</span><h3>Junior hiring recovers in parallel</h3><p>Cyclical explanations gain weight and the AI-specific interpretation should be narrowed.</p><b>Weakens the case</b></article>
-        <article class="recover-card"><span>IF THIS HAPPENS</span><h3>AI-exposed junior roles diverge further</h3><p>Repeated age × exposure or exposure × substitutability gaps across independent datasets would materially strengthen the AI contribution hypothesis.</p><b>Raises causal confidence</b></article>
+      <div class="recovery-reading">
+        <div><span class="micro">CURRENT UK READING</span><h3 id="recoveryReading">Loading…</h3></div>
+        <div class="recovery-updated" id="recoveryUpdated"></div>
+      </div>
+      <div class="recovery-lanes">
+        <div class="recovery-lane">
+          <div class="lane-head"><span>01</span><div><b>Wider labour market</b><small>Is broad hiring stabilizing?</small></div></div>
+          <div id="broadMarketLane" class="lane-items"></div>
+        </div>
+        <div class="recovery-divider"><span>RELATIVE
+RECOVERY</span></div>
+        <div class="recovery-lane first-rung-lane">
+          <div class="lane-head"><span>02</span><div><b>First rung</b><small>Are graduate and entry routes keeping pace?</small></div></div>
+          <div id="firstRungLane" class="lane-items"></div>
+        </div>
+      </div>
+      <div class="falsification-strip">
+        <article><span>IF</span><h3>Broad hiring recovers; junior hiring remains weak</h3><p>Structural entry-level pressure becomes more plausible.</p><b>Strengthens the case</b></article>
+        <article><span>IF</span><h3>Junior hiring recovers in parallel</h3><p>Cyclical explanations gain weight and the AI interpretation should narrow.</p><b>Weakens the case</b></article>
+        <article><span>IF</span><h3>AI-exposed junior roles diverge further</h3><p>Repeated age × exposure gaps would raise confidence in an AI contribution.</p><b>Raises causal confidence</b></article>
       </div>
     </section>
 

@@ -30,3 +30,20 @@ Each observation keeps:
 ## Editorial rule
 
 No composite score. The site separates general labour-market strain, AI-specific signals, mixed evidence, recovery/counter-signals and conceptual mechanisms.
+
+
+## Phase 2
+
+Phase 2 adds a live signal layer without introducing a composite index:
+- interactive UK vacancy time series (level / indexed view; 13-period / 6-period range)
+- current Stanford young-worker AI-exposure gap signal
+- current New York Fed recent-graduate unemployment / underemployment indicators
+- UK relative-recovery monitor separating the wider market from first-rung indicators
+- explicit falsification conditions
+- improved mobile evidence-ledger cards
+
+`data/trends.json` is the source of truth for charted indicators.
+`data/recovery.json` drives the relative-recovery monitor.
+`data/trends.csv` is the public download for plotted time-series values.
+
+The editorial rule remains unchanged: do not combine unlike indicators into a synthetic score.

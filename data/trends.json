@@ -1,0 +1,57 @@
+{
+  "ukVacancies": {
+    "id": "uk-vacancies",
+    "title": "UK vacancies",
+    "subtitle": "Three-month rolling average, thousands",
+    "unit": "000s",
+    "latest": 707,
+    "latest_label": "May–Jul 2026",
+    "yoy": -2.7,
+    "source": "Office for National Statistics",
+    "source_date": "2026-08-18",
+    "url": "https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/bulletins/jobsandvacanciesintheuk/august2026",
+    "note": "The series has been broadly flat in 2026 after a long post-2022 decline. ONS estimates are rolling three-month averages and the latest period is provisional.",
+    "points": [
+      {"label":"May–Jul 2025","value":727},
+      {"label":"Jun–Aug 2025","value":737},
+      {"label":"Jul–Sep 2025","value":729},
+      {"label":"Aug–Oct 2025","value":728},
+      {"label":"Sep–Nov 2025","value":730},
+      {"label":"Oct–Dec 2025","value":739},
+      {"label":"Nov–Jan 2026","value":734},
+      {"label":"Dec–Feb 2026","value":725},
+      {"label":"Jan–Mar 2026","value":718},
+      {"label":"Feb–Apr 2026","value":713},
+      {"label":"Mar–May 2026","value":710},
+      {"label":"Apr–Jun 2026","value":711},
+      {"label":"May–Jul 2026","value":707}
+    ]
+  },
+  "stanfordGap": {
+    "id": "stanford-gap",
+    "title": "Young-worker AI exposure gap",
+    "subtitle": "Kept-pace shortfall for ages 22–25 in highly AI-exposed occupations",
+    "unit": "%",
+    "source": "Stanford Digital Economy Lab",
+    "source_date": "2026-08-12",
+    "url": "https://digitaleconomy.stanford.edu/news/canariesaug26/",
+    "note": "Descriptive, not causal. The comparable shortfall widened from 15% at the July 2025 data vintage to 19% by June 2026.",
+    "points": [
+      {"label":"Jul 2025 data vintage","value":15},
+      {"label":"Jun 2026","value":19}
+    ]
+  },
+  "fedGraduates": {
+    "id": "fed-graduates",
+    "title": "US recent-graduate outcomes",
+    "subtitle": "Recent college graduates, ages 22–27",
+    "source": "Federal Reserve Bank of New York",
+    "source_date": "2026-Q2",
+    "url": "https://www.newyorkfed.org/research/college-labor-market",
+    "note": "Quarterly series. These are labor-market outcomes, not AI-specific measures.",
+    "series": [
+      {"name":"Unemployment","unit":"%","points":[{"label":"2026 Q1","value":5.7},{"label":"2026 Q2","value":5.6}]},
+      {"name":"Underemployment","unit":"%","points":[{"label":"2026 Q1","value":41.5},{"label":"2026 Q2","value":42.0}]}
+    ]
+  }
+}
