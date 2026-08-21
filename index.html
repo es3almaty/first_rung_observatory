@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>First Rung Observatory</title>
+  <meta name="description" content="An auditable evidence baseline tracking pressure at the point where young people enter the labour market." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#overview" aria-label="First Rung Observatory home">
+      <span class="brand-mark">FR</span>
+      <span><strong>First Rung Observatory</strong><small>Entry · AI · Hiring · Capability</small></span>
+    </a>
+    <nav>
+      <a href="#overview">Overview</a>
+      <a href="#threshold">Threshold</a>
+      <a href="#ladder">First rung</a>
+      <a href="#evidence">Evidence</a>
+      <a href="#sources">Sources</a>
+      <a href="#method">Method</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="overview">
+      <div class="hero-copy">
+        <div class="eyebrow"><span>TEMPORARY PROTOTYPE</span><span>Evidence baseline · August 2026</span></div>
+        <h1>When is the evidence enough?</h1>
+        <p class="lede">The Observatory tracks whether labour-market entry is weakening, where AI is plausibly contributing, and whether the evidence has crossed a threshold for action without pretending that causality is settled.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#evidence">Explore the evidence</a>
+          <a class="btn" href="data/evidence.csv" download>Download evidence CSV</a>
+        </div>
+        <p class="guardrail">No composite score. Observed outcomes, AI-specific signals, counter-evidence and mechanisms stay visibly distinct.</p>
+      </div>
+      <div class="hero-viz" aria-label="Education to work pathway showing a weakened first rung">
+        <div class="viz-grid"></div>
+        <div class="path-label p1">EDUCATION</div>
+        <div class="path-step s1"></div>
+        <div class="path-step s2"></div>
+        <div class="fracture" aria-hidden="true">
+          <i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+        </div>
+        <div class="path-step s3"></div>
+        <div class="path-step s4"></div>
+        <div class="path-label p2">WORK</div>
+        <div class="hero-note n1"><b>EARLY SIGNALS</b><span>Youth and graduate entry weakening</span></div>
+        <div class="hero-note n2"><b>ACCUMULATING EVIDENCE</b><span>Multiple evidence streams converge</span></div>
+        <div class="hero-note n3"><b>LIKELY CONTRIBUTOR</b><span>AI association visible; causality unresolved</span></div>
+      </div>
+    </section>
+
+    <section class="section reading">
+      <div class="section-head">
+        <span class="kicker">CURRENT READING</span>
+        <h2>What the baseline says</h2>
+        <p>This is a decision baseline, not a forecast engine. The reading should move only when the evidence changes.</p>
+      </div>
+      <div class="reading-grid">
+        <article><span>01</span><h3>Entry is under strain</h3><p>Global youth outcomes, graduate transitions and UK/US junior hiring are weaker than a healthy first-rung system would suggest.</p></article>
+        <article><span>02</span><h3>The AI signal is real but bounded</h3><p>Age × exposure and exposure × substitutability patterns are difficult to dismiss, but broad economic weakness still explains much of the aggregate slowdown.</p></article>
+        <article><span>03</span><h3>Redesign is wider than replacement</h3><p>Employer evidence points to rapid task and role change. Some substitution has begun, but wholesale entry-level collapse is not the modal finding.</p></article>
+        <article><span>04</span><h3>The first rung is the strategic issue</h3><p>The risk is not only fewer jobs. It is fewer opportunities to enter, learn through work and become the experienced workers firms later expect to hire.</p></article>
+      </div>
+    </section>
+
+    <section class="section threshold" id="threshold">
+      <div class="section-head split">
+        <div>
+          <span class="kicker">SIGNATURE MONITOR</span>
+          <h2>The action threshold</h2>
+        </div>
+        <p>An action threshold is reached when deterioration appears across multiple distinct evidence streams, a plausible mechanism links part of it to the suspected driver, competing explanations do not account for the full pattern, and the cost of delay may be difficult to reverse.</p>
+      </div>
+      <div class="threshold-track">
+        <div class="threshold-line"></div>
+        <article class="threshold-card met">
+          <span class="status-dot"></span><b>01 · Deterioration</b>
+          <h3>Multiple streams</h3><p>Payrolls, vacancies, official outcomes, employer reports and entrant surveys show related forms of strain.</p>
+          <small>READING · MET</small>
+        </article>
+        <article class="threshold-card met">
+          <span class="status-dot"></span><b>02 · Mechanism</b>
+          <h3>Plausible AI contribution</h3><p>Substitution of junior tasks can reduce hiring and weaken learning-by-doing without generating a wave of layoffs.</p>
+          <small>READING · MET</small>
+        </article>
+        <article class="threshold-card partial">
+          <span class="status-dot"></span><b>03 · Alternatives</b>
+          <h3>Not fully explained</h3><p>Cyclical weakness matters, but does not readily explain every age, exposure and substitutability pattern.</p>
+          <small>READING · PARTIAL</small>
+        </article>
+        <article class="threshold-card met">
+          <span class="status-dot"></span><b>04 · Delay cost</b>
+          <h3>Capability can be lost</h3><p>If firms thin the junior layer without replacing its developmental function, future experience pools weaken.</p>
+          <small>READING · MET</small>
+        </article>
+      </div>
+      <p class="threshold-caption">Current editorial judgment: <strong>the threshold for action has been crossed; the threshold for assigning primary causality to AI has not.</strong></p>
+    </section>
+
+    <section class="section ladder" id="ladder">
+      <div class="section-head split">
+        <div><span class="kicker">FIRST-RUNG MONITOR</span><h2>The capability ladder</h2></div>
+        <p>Entry-level work produces output, but it also produces experienced workers. The central question is whether new role designs preserve or replace that developmental function.</p>
+      </div>
+      <div class="ladder-wrap">
+        <div class="ladder-stage normal"><b>Education</b><span>degree + capability formation</span></div>
+        <div class="ladder-arrow">→</div>
+        <div class="ladder-stage pressure"><b>Entry role</b><span>current pressure point</span><em>↓</em></div>
+        <div class="ladder-arrow">→</div>
+        <div class="ladder-stage normal"><b>Developing</b><span>experience accumulation</span></div>
+        <div class="ladder-arrow">→</div>
+        <div class="ladder-stage normal"><b>Mid-career</b><span>tacit knowledge + judgment</span></div>
+        <div class="ladder-arrow">→</div>
+        <div class="ladder-stage strong"><b>Senior</b><span>experience + AI complementarity</span></div>
+      </div>
+      <div class="ladder-callout"><span>WORKING INTERPRETATION</span><p>Automating low-value junior work can be beneficial. The risk appears when the task disappears and its developmental function disappears with it.</p></div>
+    </section>
+
+    <section class="section evidence" id="evidence">
+      <div class="section-head split">
+        <div><span class="kicker">AUDITABLE EVIDENCE LEDGER</span><h2>What is moving the view?</h2></div>
+        <p>Each observation retains its evidence stream, geography, AI specificity, comparator, caveat and direct source link. Filters change the visible ledger, not the underlying data.</p>
+      </div>
+      <div class="evidence-tools">
+        <label>Geography<select id="geoFilter"><option value="all">All geographies</option></select></label>
+        <label>Evidence stream<select id="streamFilter"><option value="all">All streams</option></select></label>
+        <label>Signal<select id="signalFilter"><option value="all">All signals</option><option value="strain">Strain</option><option value="ai-signal">AI signal</option><option value="mixed">Mixed</option><option value="context">Context</option><option value="recovery">Recovery</option><option value="mechanism">Mechanism</option></select></label>
+        <label>AI specificity<select id="aiFilter"><option value="all">All</option><option value="Yes">Yes</option><option value="Mixed">Mixed</option><option value="No">No</option></select></label>
+        <button id="resetFilters" class="btn small">Reset</button>
+      </div>
+      <div class="evidence-meta"><span id="evidenceCount">0 observations</span><span>Click any row for comparator, caveat and why it matters.</span></div>
+      <div class="ledger" id="ledger" aria-live="polite"></div>
+    </section>
+
+    <section class="section recovery">
+      <div class="section-head split">
+        <div><span class="kicker">FALSIFICATION MONITOR</span><h2>What would change the view?</h2></div>
+        <p>The next diagnostic is relative recovery. A structural interpretation should strengthen only if entry-level hiring remains weak after the wider labour market stabilizes.</p>
+      </div>
+      <div class="recovery-grid">
+        <article class="recover-card"><span>IF THIS HAPPENS</span><h3>Aggregate hiring recovers; junior hiring remains weak</h3><p>Structural entry-level pressure becomes more plausible. Track graduate, junior and early-career hiring against the wider market.</p><b>Strengthens the case</b></article>
+        <article class="recover-card"><span>IF THIS HAPPENS</span><h3>Junior hiring recovers in parallel</h3><p>Cyclical explanations gain weight and the AI-specific interpretation should be narrowed.</p><b>Weakens the case</b></article>
+        <article class="recover-card"><span>IF THIS HAPPENS</span><h3>AI-exposed junior roles diverge further</h3><p>Repeated age × exposure or exposure × substitutability gaps across independent datasets would materially strengthen the AI contribution hypothesis.</p><b>Raises causal confidence</b></article>
+      </div>
+    </section>
+
+    <section class="section sources" id="sources">
+      <div class="section-head split">
+        <div><span class="kicker">SOURCE REGISTER</span><h2>What the Observatory checks</h2></div>
+        <p>This is a maintained register, not a closed list. New sources should be added only when they improve coverage, comparability, recency or evidentiary quality.</p>
+      </div>
+      <div class="source-summary" id="sourceSummary"></div>
+      <div class="source-list" id="sourceList"></div>
+    </section>
+
+    <section class="section method" id="method">
+      <div class="section-head split">
+        <div><span class="kicker">OPERATING MODEL</span><h2>How the Observatory works</h2></div>
+        <p>The website is the visible layer. The research asset is the evidence ledger, source register and documented judgment process beneath it.</p>
+      </div>
+      <div class="method-grid">
+        <article><span>01</span><h3>Scan regularly</h3><p>Check standing sources for genuinely new evidence on entry access, AI exposure, employer behavior and early-career capability.</p></article>
+        <article><span>02</span><h3>Queue, don't auto-publish</h3><p>Review new items for population, comparator, materiality, methodological quality and overlap with existing evidence.</p></article>
+        <article><span>03</span><h3>Classify evidence</h3><p>Tier 1 official/administrative; Tier 2 large platform or sector data; Tier 3 rigorous research or synthesis.</p></article>
+        <article><span>04</span><h3>Keep provenance</h3><p>Every observation retains source, date, comparator, caveat, AI specificity and the reason it matters.</p></article>
+        <article><span>05</span><h3>Track counter-signals</h3><p>Recovery evidence is not noise. It is required to test whether the entry-level problem persists as the wider market changes.</p></article>
+        <article><span>06</span><h3>Separate action from causality</h3><p>The site can justify monitoring and redesign before it can justify assigning a definitive causal share to AI.</p></article>
+      </div>
+      <p class="method-note"><strong>Important:</strong> “Action threshold crossed” is an editorial judgment about risk management under uncertainty. It is not a causal estimate and it does not imply that every country, sector or young worker is experiencing the same conditions.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div><strong>First Rung Observatory</strong><span>Temporary research prototype for discussion.</span></div>
+    <div>Entry access · AI exposure · Hiring · Capability</div>
+  </footer>
+
+  <dialog id="detailDialog">
+    <button class="dialog-close" aria-label="Close">×</button>
+    <div id="dialogContent"></div>
+  </dialog>
+  <script src="app.js"></script>
+</body>
+</html>
