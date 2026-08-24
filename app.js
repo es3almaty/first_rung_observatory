@@ -72,70 +72,55 @@ function renderAttribution(){
 }
 
 function renderTrends(){
-  const uk=trends.ukVacancies;
-  $('#ukVacTitle').textContent=uk.title;
-  $('#ukVacSubtitle').textContent=uk.subtitle;
-  $('#ukVacLatest').textContent=`${uk.latest}k`;
-  $('#ukVacDelta').textContent=`${uk.yoy>0?'+':''}${uk.yoy}% YoY`;
-  $('#ukVacNote').textContent=uk.note;
-  $('#ukVacSource').href=uk.url;
-
   const fed=trends.fedGraduates;
-  const unemp=fed.series.find(s=>s.name==='Unemployment').points.at(-1).value;
-  const under=fed.series.find(s=>s.name==='Underemployment').points.at(-1).value;
-  $('#fedUnemp').textContent=`${unemp.toFixed(1)}%`;
-  $('#fedUnder').textContent=`${under.toFixed(1)}%`;
-  $('#fedNote').textContent=`2026 Q2: ${unemp.toFixed(1)}% unemployment and ${under.toFixed(1)}% underemployment among recent college graduates.`;
+  const unSeries=fed.series.find(s=>s.name==='Unemployment').points;
+  const underSeries=fed.series.find(s=>s.name==='Underemployment').points;
+  const unPrev=unSeries.at(-2), unLast=unSeries.at(-1);
+  const underPrev=underSeries.at(-2), underLast=underSeries.at(-1);
+  $('#fedUnemp').textContent=`${unLast.value.toFixed(1)}%`;
+  $('#fedUnder').textContent=`${underLast.value.toFixed(1)}%`;
+  $('#fedUnempMove').textContent=`${unPrev.value.toFixed(1)}% → ${unLast.value.toFixed(1)}% · ${unPrev.label} to ${unLast.label}`;
+  $('#fedUnderMove').textContent=`${underPrev.value.toFixed(1)}% → ${underLast.value.toFixed(1)}% · ${underPrev.label} to ${underLast.label}`;
+  $('#fedNote').textContent=`${unLast.label}: ${unLast.value.toFixed(1)}% unemployment and ${underLast.value.toFixed(1)}% underemployment among recent college graduates.`;
   $('#fedSource').href=fed.url;
 
   const sg=trends.stanfordGap;
   const first=sg.points[0], last=sg.points.at(-1);
-  const stanford=$('#stanfordCard');
-  stanford.querySelector('.signal-head b').textContent=`${first.value}% → ${last.value}%`;
-  stanford.querySelector('p').textContent=`Kept-pace shortfall for ages 22–25 in highly AI-exposed occupations, ${first.label} to ${last.label}.`;
-  stanford.onclick=()=>window.open(sg.url,'_blank','noopener');
-  stanford.style.cursor='pointer';
-  drawUkVacChart();
+  $('#stanfordStart').textContent=`${first.value}%`;
+  $('#stanfordEnd').textContent=`${last.value}%`;
+  $('#stanfordNote').textContent=`Comparable kept-pace shortfall for ages 22–25 in highly AI-exposed occupations widened from ${first.value}% to ${last.value}% across the two research vintages.`;
+  $('#stanfordSource').href=sg.url;
+
+  const uk=trends.ukVacancies;
+  $('#ukVacTitle').textContent=uk.title;
+  $('#ukVacLatest').textContent=`${uk.latest}k`;
+  $('#ukVacDelta').textContent=`${uk.yoy>0?'+':''}${uk.yoy}% YoY`;
+  $('#ukVacSource').href=uk.url;
+  drawUkVacContext();
 }
 
-function drawUkVacChart(){
+function drawUkVacContext(){
   const svg=$('#ukVacChart');
   if(!svg || !trends.ukVacancies)return;
-  let points=trends.ukVacancies.points.slice();
-  if(chartRange==='6')points=points.slice(-6);
-  const raw=points.map(p=>p.value);
-  const base=raw[0];
-  const vals=chartMode==='index'?raw.map(v=>v/base*100):raw;
-  const W=760,H=330,ml=54,mr=20,mt=28,mb=58;
+  const points=trends.ukVacancies.points.slice();
+  const vals=points.map(p=>p.value);
+  const W=520,H=150,ml=14,mr=14,mt=16,mb=28;
   let min=Math.min(...vals),max=Math.max(...vals);
-  const pad=(max-min || 10)*.22;
-  min-=pad; max+=pad;
-  if(chartMode==='index'){min=Math.min(min,97);max=Math.max(max,103)}
+  const pad=(max-min||10)*.18; min-=pad; max+=pad;
   const x=i=>ml+(i/(vals.length-1||1))*(W-ml-mr);
   const y=v=>mt+(max-v)/(max-min)*(H-mt-mb);
-  const ticks=4;
-  const grid=[];
-  for(let i=0;i<=ticks;i++){
-    const val=max-(max-min)*i/ticks;
-    const yy=y(val);
-    grid.push(`<line class="chart-grid" x1="${ml}" x2="${W-mr}" y1="${yy}" y2="${yy}"></line><text class="chart-axis-label" x="${ml-10}" y="${yy+4}" text-anchor="end">${chartMode==='index'?val.toFixed(0):Math.round(val)}</text>`);
-  }
   const coords=vals.map((v,i)=>[x(i),y(v)]);
   const path=coords.map((c,i)=>`${i?'L':'M'} ${c[0].toFixed(2)} ${c[1].toFixed(2)}`).join(' ');
-  const area=`M ${coords[0][0]} ${H-mb} `+coords.map((c,i)=>`${i?'L':'L'} ${c[0]} ${c[1]}`).join(' ')+` L ${coords.at(-1)[0]} ${H-mb} Z`;
-  const xLabels=points.map((p,i)=>{
-    const show=points.length<=6 || i===0 || i===points.length-1 || i%2===0;
-    return show?`<text class="chart-axis-label" x="${x(i)}" y="${H-24}" text-anchor="middle">${shortLabel(p.label)}</text>`:'';
-  }).join('');
-  const baseline=chartMode==='index'?`<line class="chart-baseline" x1="${ml}" x2="${W-mr}" y1="${y(100)}" y2="${y(100)}"></line><text class="chart-axis-label" x="${W-mr}" y="${y(100)-6}" text-anchor="end">baseline 100</text>`:'';
-  const circles=coords.map((c,i)=>`<circle class="chart-point ${i===coords.length-1?'latest':''}" cx="${c[0]}" cy="${c[1]}" r="5" tabindex="0" data-index="${i}"></circle>`).join('');
-  svg.innerHTML=`<defs><linearGradient id="chartFade" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#6aa9db" stop-opacity=".28"/><stop offset="100%" stop-color="#6aa9db" stop-opacity=".02"/></linearGradient></defs>${grid.join('')}${baseline}<path class="chart-area" d="${area}"></path><path class="chart-line" d="${path}"></path>${circles}${xLabels}<text class="chart-axis-label" x="${ml}" y="16">${chartMode==='index'?'Index, first visible period = 100':'Vacancies, thousands'}</text>`;
+  const area=`M ${coords[0][0]} ${H-mb} `+coords.map(c=>`L ${c[0]} ${c[1]}`).join(' ')+` L ${coords.at(-1)[0]} ${H-mb} Z`;
+  const labels=`<text class="context-axis-label" x="${x(0)}" y="${H-7}" text-anchor="start">${shortLabel(points[0].label)}</text><text class="context-axis-label" x="${x(points.length-1)}" y="${H-7}" text-anchor="end">${shortLabel(points.at(-1).label)}</text>`;
+  const circles=coords.map((c,i)=>`<circle class="context-point ${i===coords.length-1?'latest':''}" cx="${c[0]}" cy="${c[1]}" r="${i===coords.length-1?5:3}" tabindex="0" data-index="${i}"></circle>`).join('');
+  svg.innerHTML=`<defs><linearGradient id="contextFade" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#6aa9db" stop-opacity=".25"/><stop offset="100%" stop-color="#6aa9db" stop-opacity=".01"/></linearGradient></defs><line class="context-baseline" x1="${ml}" x2="${W-mr}" y1="${H-mb}" y2="${H-mb}"></line><path class="context-area" d="${area}"></path><path class="context-line" d="${path}"></path>${circles}${labels}`;
   const tooltip=$('#chartTooltip');
-  svg.querySelectorAll('.chart-point').forEach(el=>{
+  svg.querySelectorAll('.context-point').forEach(el=>{
     const show=()=>{
-      const i=+el.dataset.index,p=points[i],v=vals[i];
+      const i=+el.dataset.index,p=points[i];
       const vb=svg.getBoundingClientRect();
-      tooltip.innerHTML=`<b>${p.label}</b><br>${chartMode==='index'?v.toFixed(1)+' index':p.value+'k vacancies'}`;
+      tooltip.innerHTML=`<b>${p.label}</b><br>${p.value}k vacancies`;
       tooltip.hidden=false;
       tooltip.style.left=`${el.cx.baseVal.value/W*vb.width}px`;
       tooltip.style.top=`${el.cy.baseVal.value/H*vb.height}px`;
@@ -145,7 +130,7 @@ function drawUkVacChart(){
   });
 }
 function shortLabel(s){
-  return s.replace(' 2025',' ’25').replace(' 2026',' ’26').replace('May–Jul','May–Jul').replace('Jun–Aug','Jun–Aug').replace('Jul–Sep','Jul–Sep').replace('Aug–Oct','Aug–Oct').replace('Sep–Nov','Sep–Nov').replace('Oct–Dec','Oct–Dec').replace('Nov–Jan','Nov–Jan').replace('Dec–Feb','Dec–Feb').replace('Jan–Mar','Jan–Mar').replace('Feb–Apr','Feb–Apr').replace('Mar–May','Mar–May').replace('Apr–Jun','Apr–Jun');
+  return s.replace(' 2025',' ’25').replace(' 2026',' ’26');
 }
 
 function renderRecovery(){
@@ -163,16 +148,6 @@ function bind(){
   $('#resetFilters').onclick=()=>{['geoFilter','streamFilter','signalFilter','aiFilter'].forEach(id=>$(`#${id}`).value='all');renderLedger()};
   $('.dialog-close').onclick=()=>$('#detailDialog').close();
   $('#detailDialog').addEventListener('click',e=>{if(e.target===$('#detailDialog'))$('#detailDialog').close()});
-  document.querySelectorAll('[data-chart-mode]').forEach(btn=>btn.addEventListener('click',()=>{
-    chartMode=btn.dataset.chartMode;
-    document.querySelectorAll('[data-chart-mode]').forEach(b=>b.classList.toggle('active',b===btn));
-    drawUkVacChart();
-  }));
-  document.querySelectorAll('[data-chart-range]').forEach(btn=>btn.addEventListener('click',()=>{
-    chartRange=btn.dataset.chartRange;
-    document.querySelectorAll('[data-chart-range]').forEach(b=>b.classList.toggle('active',b===btn));
-    drawUkVacChart();
-  }));
 }
 boot().catch(err=>{
   console.error(err);

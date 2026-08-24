@@ -59,45 +59,66 @@
 
     <section class="section pulse" id="trends">
       <div class="section-head split">
-        <div><span class="kicker">LIVE SIGNAL MONITOR</span><h2>Watch the first rung move</h2></div>
-        <p>The Observatory separates wider-market context from first-rung outcomes and AI-specific signals. Work-organization evidence is kept in a separate attribution layer below so that unlike measures do not masquerade as one causal story.</p>
+        <div><span class="kicker">LIVE FIRST-RUNG MONITOR</span><h2>Watch the first rung, not the whole economy</h2></div>
+        <p>The Observatory leads with outcomes closest to labor-market entry and keeps the wider market as context. The hierarchy matters: first-rung outcomes, AI-specific differentials, then the broader demand benchmark.</p>
       </div>
-      <div class="pulse-grid">
-        <article class="chart-card chart-card-main">
-          <div class="chart-topline">
-            <div><span class="micro">UK LABOUR DEMAND</span><h3 id="ukVacTitle">UK vacancies</h3><p id="ukVacSubtitle">Three-month rolling average, thousands</p></div>
-            <div class="chart-metric"><b id="ukVacLatest">707k</b><span id="ukVacDelta">-2.7% YoY</span></div>
+
+      <div class="signature-grid">
+        <article class="signature-card fed-feature">
+          <div class="signature-topline">
+            <div><span class="micro">FIRST-RUNG OUTCOME · US</span><h3>Recent-graduate outcomes</h3></div>
+            <span class="evidence-role">Outcome</span>
           </div>
-          <div class="chart-controls" role="group" aria-label="UK vacancy chart options">
-            <button class="chart-toggle active" data-chart-mode="level">Level</button>
-            <button class="chart-toggle" data-chart-mode="index">Index</button>
-            <button class="chart-toggle active" data-chart-range="all">13 periods</button>
-            <button class="chart-toggle" data-chart-range="6">Last 6</button>
+          <div class="fed-feature-metrics">
+            <div class="fed-feature-metric">
+              <b id="fedUnemp">5.6%</b>
+              <span>unemployment</span>
+              <small id="fedUnempMove">5.7% → 5.6% · Q1 to Q2 2026</small>
+            </div>
+            <div class="fed-feature-metric">
+              <b id="fedUnder">42.0%</b>
+              <span>underemployment</span>
+              <small id="fedUnderMove">41.5% → 42.0% · Q1 to Q2 2026</small>
+            </div>
           </div>
-          <div class="svg-chart-wrap"><svg id="ukVacChart" class="svg-chart" viewBox="0 0 760 330" role="img" aria-label="UK vacancy trend"></svg><div id="chartTooltip" class="chart-tooltip" hidden></div></div>
-          <div class="chart-footer"><p id="ukVacNote"></p><a id="ukVacSource" target="_blank" rel="noopener">ONS source ↗</a></div>
+          <p id="fedNote" class="signature-note">Recent-graduate outcomes remained difficult in 2026 Q2.</p>
+          <div class="signature-footer"><span>Recent college graduates, ages 22–27</span><a id="fedSource" target="_blank" rel="noopener">New York Fed ↗</a></div>
         </article>
-        <div class="signal-stack">
-          <article class="signal-card" id="stanfordCard">
-            <span class="micro">AI-EXPOSURE SIGNAL</span>
-            <div class="signal-head"><h3>Young-worker gap</h3><b>15% → 19%</b></div>
-            <div class="mini-bridge"><i></i><i></i><span></span></div>
-            <p>Kept-pace shortfall for ages 22–25 in highly AI-exposed occupations, July 2025 data vintage to June 2026.</p>
-            <small>Descriptive, not causal.</small>
-          </article>
-          <article class="signal-card">
-            <span class="micro">US GRADUATE OUTCOMES</span>
-            <div class="dual-metric"><div><b id="fedUnemp">5.6%</b><span>unemployment</span></div><div><b id="fedUnder">42.0%</b><span>underemployment</span></div></div>
-            <p id="fedNote">Recent-graduate outcomes remained difficult in 2026 Q2.</p>
-            <a id="fedSource" target="_blank" rel="noopener">New York Fed ↗</a>
-          </article>
-          <article class="signal-card signal-card-dark">
-            <span class="micro">READING DISCIPLINE</span>
-            <h3>Exposure is not treatment.</h3>
-            <p>Occupational AI exposure overlaps with working-from-home exposure. Exposure studies are therefore signals to investigate, not clean causal estimates.</p>
-          </article>
-        </div>
+
+        <article class="signature-card stanford-feature" id="stanfordCard">
+          <div class="signature-topline">
+            <div><span class="micro">AI-SPECIFIC DIFFERENTIAL · US</span><h3>Young-worker employment gap</h3></div>
+            <span class="evidence-role ai">AI signal</span>
+          </div>
+          <div class="stanford-feature-metric"><span id="stanfordStart">15%</span><i>→</i><b id="stanfordEnd">19%</b></div>
+          <div class="dumbbell" aria-label="Stanford young-worker gap widened from 15 percent to 19 percent">
+            <div class="dumbbell-line"></div>
+            <div class="dumbbell-point start"><span>15%</span><small>Jul 2025 data vintage</small></div>
+            <div class="dumbbell-point end"><span>19%</span><small>Jun 2026</small></div>
+          </div>
+          <p id="stanfordNote" class="signature-note">Comparable shortfall for ages 22–25 in highly AI-exposed occupations widened across the two research vintages.</p>
+          <div class="signature-footer"><span>Descriptive differential, not a causal time series</span><a id="stanfordSource" target="_blank" rel="noopener">Stanford DEL ↗</a></div>
+        </article>
       </div>
+
+      <article class="context-strip">
+        <div class="context-copy">
+          <span class="micro">WIDER-MARKET CONTEXT · UK</span>
+          <h3 id="ukVacTitle">UK vacancies</h3>
+          <p><strong id="ukVacLatest">707k</strong> in May–Jul 2026 <span id="ukVacDelta">−2.7% YoY</span>. Broader labor demand has been flattening after a prolonged decline, so this is a benchmark for the recovery test rather than a first-rung measure.</p>
+          <a id="ukVacSource" target="_blank" rel="noopener">ONS source ↗</a>
+        </div>
+        <div class="context-chart-wrap">
+          <svg id="ukVacChart" class="context-chart" viewBox="0 0 520 150" role="img" aria-label="Compact UK vacancy context trend"></svg>
+          <div id="chartTooltip" class="chart-tooltip" hidden></div>
+        </div>
+      </article>
+
+      <div class="reading-strip">
+        <span class="micro">CURRENT READING</span>
+        <p><strong>First-rung outcomes remain weak; the Stanford age × exposure differential widened; the wider UK vacancy market is closer to stabilization.</strong> That divergence is worth monitoring, but remote-work exposure remains a material attribution challenge.</p>
+      </div>
+
       <div class="trend-downloads"><a class="btn small" href="data/trends.csv" download>Download trend data CSV</a><a class="btn small" href="data/trends.json" target="_blank">View trend JSON</a></div>
     </section>
 

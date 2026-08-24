@@ -52,3 +52,7 @@ The editorial rule remains unchanged: do not combine unlike indicators into a sy
 ## v20 evidence update (24 August 2026)
 
 The beta now incorporates the paper's expanded remote-work and work-organization evidence. Three studies were added to the auditable ledger: Emanuel, Harrington & Pallais (proximity and feedback), Wang, Zhang & Liao (remote hiring requirements), and Lambert & Schindler (four-country joint WFH/GenAI exposure test). The interface now includes a dedicated Attribution Check so remote work is treated as both a developmental mechanism and a competing explanation rather than folded into an AI score.
+
+## Signal hierarchy update
+
+The live monitor now leads with direct first-rung outcomes (New York Fed recent-graduate unemployment and underemployment) and the Stanford young-worker AI-exposure differential. UK vacancies are retained only as a compact wider-market context benchmark for the relative-recovery test.
