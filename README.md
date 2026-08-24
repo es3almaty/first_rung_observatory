@@ -32,9 +32,9 @@ Each observation keeps:
 No composite score. The site separates general labour-market strain, AI-specific signals, mixed evidence, recovery/counter-signals and conceptual mechanisms.
 
 
-## Phase 2
+## Phase 2 · v20 evidence update
 
-Phase 2 adds a live signal layer without introducing a composite index:
+Phase 2 · v20 evidence update adds a live signal layer without introducing a composite index:
 - interactive UK vacancy time series (level / indexed view; 13-period / 6-period range)
 - current Stanford young-worker AI-exposure gap signal
 - current New York Fed recent-graduate unemployment / underemployment indicators
@@ -47,3 +47,8 @@ Phase 2 adds a live signal layer without introducing a composite index:
 `data/trends.csv` is the public download for plotted time-series values.
 
 The editorial rule remains unchanged: do not combine unlike indicators into a synthetic score.
+
+
+## v20 evidence update (24 August 2026)
+
+The beta now incorporates the paper's expanded remote-work and work-organization evidence. Three studies were added to the auditable ledger: Emanuel, Harrington & Pallais (proximity and feedback), Wang, Zhang & Liao (remote hiring requirements), and Lambert & Schindler (four-country joint WFH/GenAI exposure test). The interface now includes a dedicated Attribution Check so remote work is treated as both a developmental mechanism and a competing explanation rather than folded into an AI score.

@@ -11,11 +11,12 @@
   <header class="topbar">
     <a class="brand" href="#overview" aria-label="First Rung Observatory home">
       <span class="brand-mark">FR</span>
-      <span><strong>First Rung Observatory</strong><small>Entry · AI · Hiring · Capability</small></span>
+      <span><strong>First Rung Observatory</strong><small>Entry · Work design · AI · Capability</small></span>
     </a>
     <nav>
       <a href="#overview">Overview</a>
       <a href="#trends">Trends</a>
+      <a href="#attribution">Attribution</a>
       <a href="#threshold">Threshold</a>
       <a href="#ladder">First rung</a>
       <a href="#evidence">Evidence</a>
@@ -30,14 +31,15 @@
         <img class="hero-banner" src="assets/first-rung-hero.png" alt="First Rung Observatory banner showing a pathway from education to work with early signals, accumulating evidence, and an action threshold." />
       </div>
       <div class="hero-copy hero-copy-below">
-        <div class="eyebrow"><span>TEMPORARY PROTOTYPE</span><span>Evidence baseline · August 2026</span></div>
+        <div class="eyebrow"><span>TEMPORARY PROTOTYPE</span><span>Evidence baseline · Updated August 24 2026</span></div>
         <h1>When is the evidence enough?</h1>
-        <p class="lede">The Observatory tracks whether labour-market entry is weakening, where AI is plausibly contributing, and whether the evidence has crossed a threshold for action without pretending that causality is settled.</p>
+        <p class="lede">The Observatory tracks whether labour-market entry is weakening, how work organization and AI are changing the first rung, and whether the evidence has crossed a threshold for action without pretending that causal attribution is settled.</p>
         <div class="hero-actions">
           <a class="btn primary" href="#evidence">Explore the evidence</a>
           <a class="btn" href="data/evidence.csv" download>Download evidence CSV</a>
         </div>
-        <p class="guardrail">No composite score. Observed outcomes, AI-specific signals, counter-evidence and mechanisms stay visibly distinct.</p>
+        <p class="guardrail">No composite score. Labour-market outcomes, work-organization mechanisms, AI-specific signals and counter-evidence stay visibly distinct.</p>
+        <div class="observatory-status"><span id="statusEvidence">Loading evidence baseline…</span><span>Last evidence update · 24 Aug 2026</span></div>
       </div>
     </section>
 
@@ -48,17 +50,17 @@
         <p>This is a decision baseline, not a forecast engine. The reading should move only when the evidence changes.</p>
       </div>
       <div class="reading-grid">
-        <article><span>01</span><h3>Entry is under strain</h3><p>Global youth outcomes, graduate transitions and UK/US junior hiring are weaker than a healthy first-rung system would suggest.</p></article>
-        <article><span>02</span><h3>The AI signal is real but bounded</h3><p>Age × exposure and exposure × substitutability patterns are difficult to dismiss, but broad economic weakness still explains much of the aggregate slowdown.</p></article>
-        <article><span>03</span><h3>Redesign is wider than replacement</h3><p>Employer evidence points to rapid task and role change. Some substitution has begun, but wholesale entry-level collapse is not the modal finding.</p></article>
-        <article><span>04</span><h3>The first rung is the strategic issue</h3><p>The risk is not only fewer jobs. It is fewer opportunities to enter, learn through work and become the experienced workers firms later expect to hire.</p></article>
+        <article><span>01</span><h3>Entry is under strain</h3><p>Global youth outcomes, graduate transitions and junior hiring remain weaker than a healthy first-rung system would suggest.</p></article>
+        <article><span>02</span><h3>Work organization changed the first rung</h3><p>Remote and hybrid work predate generative AI and can reduce proximity, feedback and the ease with which inexperienced workers are developed.</p></article>
+        <article><span>03</span><h3>An AI contribution remains plausible</h3><p>Age × exposure and substitutability patterns remain suggestive, but working-from-home exposure materially complicates simple AI attribution.</p></article>
+        <article><span>04</span><h3>Capability formation is the strategic issue</h3><p>The risk is not only fewer jobs. It is fewer opportunities to enter, learn through work and become the experienced workers firms later expect to hire.</p></article>
       </div>
     </section>
 
     <section class="section pulse" id="trends">
       <div class="section-head split">
-        <div><span class="kicker">PHASE 2 · LIVE SIGNAL MONITOR</span><h2>Watch the first rung move</h2></div>
-        <p>The Observatory now separates a genuine time series from shorter-run signal updates. The aim is to make recovery, divergence and falsification visible without collapsing unlike indicators into a single score.</p>
+        <div><span class="kicker">LIVE SIGNAL MONITOR</span><h2>Watch the first rung move</h2></div>
+        <p>The Observatory separates wider-market context from first-rung outcomes and AI-specific signals. Work-organization evidence is kept in a separate attribution layer below so that unlike measures do not masquerade as one causal story.</p>
       </div>
       <div class="pulse-grid">
         <article class="chart-card chart-card-main">
@@ -91,12 +93,24 @@
           </article>
           <article class="signal-card signal-card-dark">
             <span class="micro">READING DISCIPLINE</span>
-            <h3>Do not make unlike series pretend to agree.</h3>
-            <p>Vacancies, payrolls, employer surveys and AI-exposure measures answer different questions. Convergence matters precisely because the measures are different.</p>
+            <h3>Exposure is not treatment.</h3>
+            <p>Occupational AI exposure overlaps with working-from-home exposure. Exposure studies are therefore signals to investigate, not clean causal estimates.</p>
           </article>
         </div>
       </div>
       <div class="trend-downloads"><a class="btn small" href="data/trends.csv" download>Download trend data CSV</a><a class="btn small" href="data/trends.json" target="_blank">View trend JSON</a></div>
+    </section>
+
+    <section class="section attribution" id="attribution">
+      <div class="section-head split">
+        <div><span class="kicker">ATTRIBUTION CHECK</span><h2>Remote work changes the causal story</h2></div>
+        <p>Remote and hybrid work predate generative AI and affect many of the same occupations. The evidence now makes work organization both a developmental mechanism and a first-order competing explanation for weaker early-career hiring.</p>
+      </div>
+      <div class="attribution-grid" id="attributionGrid"></div>
+      <div class="attribution-synthesis">
+        <span>CURRENT READING</span>
+        <p><strong>Remote work weakens simple AI attribution but strengthens the first-rung argument.</strong> If reduced proximity makes junior workers harder to develop, and AI then removes or redesigns some of the tasks through which they learn, organizations can rationally shift from building capability toward buying experience.</p>
+      </div>
     </section>
 
     <section class="section threshold" id="threshold">
@@ -116,13 +130,13 @@
         </article>
         <article class="threshold-card met">
           <span class="status-dot"></span><b>02 · Mechanism</b>
-          <h3>Plausible AI contribution</h3><p>Substitution of junior tasks can reduce hiring and weaken learning-by-doing without generating a wave of layoffs.</p>
+          <h3>Two plausible pathways</h3><p>Reduced coworker proximity can weaken feedback and development; AI can reduce or redesign junior tasks. Both can thin learning-by-doing without a wave of layoffs.</p>
           <small>READING · MET</small>
         </article>
         <article class="threshold-card partial">
           <span class="status-dot"></span><b>03 · Alternatives</b>
-          <h3>Not fully explained</h3><p>Cyclical weakness matters, but does not readily explain every age, exposure and substitutability pattern.</p>
-          <small>READING · PARTIAL</small>
+          <h3>Material competing explanations</h3><p>Weak growth and work reorganization explain important parts of the pattern. AI exposure is not a clean treatment when it overlaps with working-from-home exposure.</p>
+          <small>READING · MATERIAL</small>
         </article>
         <article class="threshold-card met">
           <span class="status-dot"></span><b>04 · Delay cost</b>
@@ -141,21 +155,21 @@
       <div class="ladder-wrap">
         <div class="ladder-stage normal"><b>Education</b><span>degree + capability formation</span></div>
         <div class="ladder-arrow">→</div>
-        <div class="ladder-stage pressure"><b>Entry role</b><span>current pressure point</span><em>↓</em></div>
+        <div class="ladder-stage pressure"><b>Entry role</b><span>less proximity + fewer junior tasks</span><em>↓</em></div>
         <div class="ladder-arrow">→</div>
-        <div class="ladder-stage normal"><b>Developing</b><span>experience accumulation</span></div>
+        <div class="ladder-stage normal"><b>Developing</b><span>mentoring + learning-by-doing</span></div>
         <div class="ladder-arrow">→</div>
         <div class="ladder-stage normal"><b>Mid-career</b><span>tacit knowledge + judgment</span></div>
         <div class="ladder-arrow">→</div>
         <div class="ladder-stage strong"><b>Senior</b><span>experience + AI complementarity</span></div>
       </div>
-      <div class="ladder-callout"><span>WORKING INTERPRETATION</span><p>Automating low-value junior work can be beneficial. The risk appears when the task disappears and its developmental function disappears with it.</p></div>
+      <div class="ladder-callout"><span>WORKING INTERPRETATION</span><p>The strategic question is not office versus remote or human versus AI. It is whether work design still produces experienced workers. Obsolete tasks and unnecessary presence can go; their developmental function still has to be replaced.</p></div>
     </section>
 
     <section class="section evidence" id="evidence">
       <div class="section-head split">
         <div><span class="kicker">AUDITABLE EVIDENCE LEDGER</span><h2>What is moving the view?</h2></div>
-        <p>Each observation retains its evidence stream, geography, AI specificity, comparator, caveat and direct source link. Filters change the visible ledger, not the underlying data.</p>
+        <p>Each observation retains its evidence stream, geography, AI specificity, comparator, caveat and direct source link. Work-organization studies sit alongside payrolls, vacancies, employer reports and entrant outcomes rather than being folded into an AI score.</p>
       </div>
       <div class="evidence-tools">
         <label>Geography<select id="geoFilter"><option value="all">All geographies</option></select></label>
@@ -171,7 +185,7 @@
     <section class="section recovery" id="recovery">
       <div class="section-head split">
         <div><span class="kicker">RELATIVE-RECOVERY MONITOR</span><h2>Is the first rung recovering with the wider market?</h2></div>
-        <p>The structural interpretation strengthens only if junior and graduate routes remain weak as aggregate hiring stabilizes. This monitor keeps those two lanes separate.</p>
+        <p>The structural interpretation strengthens only if junior and graduate routes remain weak as aggregate hiring stabilizes. Causal confidence in an AI contribution must also survive work-organization controls.</p>
       </div>
       <div class="recovery-reading">
         <div><span class="micro">CURRENT UK READING</span><h3 id="recoveryReading">Loading…</h3></div>
@@ -192,7 +206,7 @@ RECOVERY</span></div>
       <div class="falsification-strip">
         <article><span>IF</span><h3>Broad hiring recovers; junior hiring remains weak</h3><p>Structural entry-level pressure becomes more plausible.</p><b>Strengthens the case</b></article>
         <article><span>IF</span><h3>Junior hiring recovers in parallel</h3><p>Cyclical explanations gain weight and the AI interpretation should narrow.</p><b>Weakens the case</b></article>
-        <article><span>IF</span><h3>AI-exposed junior roles diverge further</h3><p>Repeated age × exposure gaps would raise confidence in an AI contribution.</p><b>Raises causal confidence</b></article>
+        <article><span>IF</span><h3>The AI signal survives work-organization controls</h3><p>Repeated age × exposure gaps that remain after accounting for working-from-home exposure would materially raise causal confidence.</p><b>Raises causal confidence</b></article>
       </div>
     </section>
 
@@ -211,12 +225,12 @@ RECOVERY</span></div>
         <p>The website is the visible layer. The research asset is the evidence ledger, source register and documented judgment process beneath it.</p>
       </div>
       <div class="method-grid">
-        <article><span>01</span><h3>Scan regularly</h3><p>Check standing sources for genuinely new evidence on entry access, AI exposure, employer behavior and early-career capability.</p></article>
-        <article><span>02</span><h3>Queue, don't auto-publish</h3><p>Review new items for population, comparator, materiality, methodological quality and overlap with existing evidence.</p></article>
+        <article><span>01</span><h3>Scan regularly</h3><p>Check standing sources for genuinely new evidence on entry access, work organization, AI exposure, employer behavior and early-career capability.</p></article>
+        <article><span>02</span><h3>Queue, don't auto-publish</h3><p>Review new items for population, comparator, materiality, methodological quality, overlapping treatments and reuse of existing datasets.</p></article>
         <article><span>03</span><h3>Classify evidence</h3><p>Tier 1 official/administrative; Tier 2 large platform or sector data; Tier 3 rigorous research or synthesis.</p></article>
-        <article><span>04</span><h3>Keep provenance</h3><p>Every observation retains source, date, comparator, caveat, AI specificity and the reason it matters.</p></article>
+        <article><span>04</span><h3>Keep provenance</h3><p>Every observation retains source, date, comparator, caveat, AI specificity and the reason it matters. Exposure studies are checked explicitly for confounding and co-treatment.</p></article>
         <article><span>05</span><h3>Track counter-signals</h3><p>Recovery evidence is not noise. It is required to test whether the entry-level problem persists as the wider market changes.</p></article>
-        <article><span>06</span><h3>Separate action from causality</h3><p>The site can justify monitoring and redesign before it can justify assigning a definitive causal share to AI.</p></article>
+        <article><span>06</span><h3>Separate action from causality</h3><p>The site can justify monitoring and work redesign before it can justify assigning a definitive causal share to AI, remote work or any other single driver.</p></article>
       </div>
       <p class="method-note"><strong>Important:</strong> “Action threshold crossed” is an editorial judgment about risk management under uncertainty. It is not a causal estimate and it does not imply that every country, sector or young worker is experiencing the same conditions.</p>
     </section>
@@ -224,7 +238,7 @@ RECOVERY</span></div>
 
   <footer>
     <div><strong>First Rung Observatory</strong><span>Temporary research prototype for discussion.</span></div>
-    <div>Entry access · AI exposure · Hiring · Capability</div>
+    <div>Entry access · Work organization · AI exposure · Capability</div>
   </footer>
 
   <dialog id="detailDialog">

@@ -17,6 +17,8 @@ async function boot(){
   renderLedger();
   renderSources();
   renderTrends();
+  renderAttribution();
+  renderStatus();
   renderRecovery();
   bind();
 }
@@ -43,6 +45,30 @@ function renderSources(){
   $('#sourceSummary').innerHTML=`<div class="source-stat"><b>${sourceNames.length}</b><span>Named sources</span></div><div class="source-stat"><b>${evidence.length}</b><span>Evidence observations</span></div><div class="source-stat"><b>${geos.length}</b><span>Geographies / regions</span></div><div class="source-stat"><b>${streams.length}</b><span>Evidence streams</span></div>`;
   const bySource={}; evidence.forEach(d=>(bySource[d.source]??=[]).push(d));
   $('#sourceList').innerHTML=Object.entries(bySource).sort((a,b)=>a[0].localeCompare(b[0])).map(([name,items])=>`<article class="source-item"><div><h3>${name}</h3><p>${items.map(i=>`${i.date} · ${i.geography} · ${i.stream}`).join(' | ')}</p></div><a href="${items[0].url}" target="_blank" rel="noopener">Source ↗</a></article>`).join('');
+}
+
+function renderStatus(){
+  const geos=uniq(evidence.map(d=>d.geography));
+  const streams=uniq(evidence.map(d=>d.stream));
+  const el=$('#statusEvidence');
+  if(el)el.textContent=`${evidence.length} observations · ${geos.length} geographies / regions · ${streams.length} evidence streams`;
+}
+
+function renderAttribution(){
+  const grid=$('#attributionGrid'); if(!grid)return;
+  const roles={
+    'emanuel-proximity-2026':'PROXIMITY MECHANISM',
+    'wang-remote-hiring-2026':'HIRING REQUIREMENTS',
+    'lambert-schindler-2026':'JOINT ATTRIBUTION TEST'
+  };
+  const ids=Object.keys(roles);
+  grid.innerHTML=ids.map(id=>{
+    const d=evidence.find(x=>x.id===id); if(!d)return '';
+    return `<article class="attribution-card" tabindex="0" data-id="${d.id}"><span class="micro">${roles[id]}</span><div class="attribution-metric">${d.metric}</div><h3>${d.headline}</h3><p>${d.detail}</p><div class="attribution-caveat"><b>CAUTION</b>${d.caveat}</div><a href="${d.url}" target="_blank" rel="noopener">Direct source ↗</a></article>`;
+  }).join('');
+  grid.querySelectorAll('.attribution-card').forEach(card=>{
+    card.addEventListener('keydown',e=>{if(e.key==='Enter')openDetail(card.dataset.id)});
+  });
 }
 
 function renderTrends(){
