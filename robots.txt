@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://firstrung.ewansimpson.org/sitemap.xml
