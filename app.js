@@ -42,9 +42,12 @@ function openDetail(id){
 }
 function renderSources(){
   const sourceNames=uniq(evidence.map(d=>d.source)); const geos=uniq(evidence.map(d=>d.geography)); const streams=uniq(evidence.map(d=>d.stream));
-  $('#sourceSummary').innerHTML=`<div class="source-stat"><b>${sourceNames.length}</b><span>Named sources</span></div><div class="source-stat"><b>${evidence.length}</b><span>Evidence observations</span></div><div class="source-stat"><b>${geos.length}</b><span>Geographies / regions</span></div><div class="source-stat"><b>${streams.length}</b><span>Evidence streams</span></div>`;
+  $('#sourceSummary').innerHTML=`<div class="source-stat"><b>${sourceNames.length}</b><span>Named publishers / programs</span></div><div class="source-stat"><b>${evidence.length}</b><span>Evidence observations</span></div><div class="source-stat"><b>${geos.length}</b><span>Geographies / regions</span></div><div class="source-stat"><b>${streams.length}</b><span>Evidence streams</span></div>`;
   const bySource={}; evidence.forEach(d=>(bySource[d.source]??=[]).push(d));
-  $('#sourceList').innerHTML=Object.entries(bySource).sort((a,b)=>a[0].localeCompare(b[0])).map(([name,items])=>`<article class="source-item"><div><h3>${name}</h3><p>${items.map(i=>`${i.date} · ${i.geography} · ${i.stream}`).join(' | ')}</p></div><a href="${items[0].url}" target="_blank" rel="noopener">Source ↗</a></article>`).join('');
+  $('#sourceList').innerHTML=Object.entries(bySource).sort((a,b)=>a[0].localeCompare(b[0])).map(([name,items])=>{
+    const uniqueLinks=[...new Map(items.map(i=>[i.url,i])).values()];
+    return `<article class="source-item"><div><h3>${name}</h3><p>${items.length} observation${items.length===1?'':'s'} · ${uniqueLinks.length} linked publication${uniqueLinks.length===1?'':'s'}</p><ul class="source-links">${uniqueLinks.map(i=>`<li><a href="${i.url}" target="_blank" rel="noopener">${i.date} · ${i.headline} ↗</a></li>`).join('')}</ul></div></article>`;
+  }).join('');
 }
 
 function renderStatus(){

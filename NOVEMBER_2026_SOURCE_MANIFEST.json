@@ -1,0 +1,149 @@
+[
+  {
+    "id": "nfer-skills-imperative-wp1-2022",
+    "date": "2022",
+    "source": "NFER · Skills Imperative 2035",
+    "headline": "Essential employment skills draw on long-standing research rather than a new AI-era consensus",
+    "source_url": "https://www.nfer.ac.uk/publications/the-skills-imperative-2035-what-does-the-literature-tell-us-about-essential-skills-most-needed-for-work/"
+  },
+  {
+    "id": "nfer-skills-imperative-wp3-revised-2024",
+    "date": "2023 / revised 2024",
+    "source": "NFER · Skills Imperative 2035",
+    "headline": "2035 skills-demand projections were revised after an ONS coding error",
+    "source_url": "https://www.nfer.ac.uk/publications/the-skills-imperative-2035-an-analysis-of-the-demand-for-skills-in-the-labour-market-in-2035/"
+  },
+  {
+    "id": "nfer-skills-imperative-wp4-2024",
+    "date": "2024",
+    "source": "NFER · Skills Imperative 2035",
+    "headline": "Perceived skills gaps are not the same as independently demonstrated capability",
+    "source_url": "https://www.nfer.ac.uk/publications/the-skills-imperative-2035-rethinking-skills-gaps-and-solutions/"
+  },
+  {
+    "id": "nfer-skills-imperative-wp5-2024",
+    "date": "2024",
+    "source": "NFER · Skills Imperative 2035",
+    "headline": "Transitions out of declining occupations face barriers beyond retraining alone",
+    "source_url": "https://www.nfer.ac.uk/publications/the-skills-imperative-2035-shifting-sands-anticipating-changes-in-the-future-labour-market-and-supporting-the-workers-at-greatest-risk/"
+  },
+  {
+    "id": "nfer-skills-imperative-wp7-2025",
+    "date": "2025",
+    "source": "NFER · Skills Imperative 2035",
+    "headline": "Youth skill development varies across educational systems and contexts",
+    "source_url": "https://www.nfer.ac.uk/publications/investigating-cross-country-differences-in-young-people-s-skill-development-and-identifying-factors-associated-with-high-performance/"
+  },
+  {
+    "id": "nfer-skills-imperative-final-2025",
+    "date": "2025-11",
+    "source": "NFER · Skills Imperative 2035",
+    "headline": "NFER calls for lifelong skills development under uncertain occupational change",
+    "source_url": "https://www.nfer.ac.uk/publications/skills-imperative-2035-final-report/"
+  },
+  {
+    "id": "pissarides-review-work-wellbeing-2025",
+    "date": "2025-01-26",
+    "source": "Institute for the Future of Work",
+    "headline": "Work design and firm governance mediate the consequences of automation",
+    "source_url": "https://www.ifow.org/publications/the-final-report-of-the-pissarides-review"
+  },
+  {
+    "id": "milburn-young-people-work-2026",
+    "date": "2026-05 / updated 2026-08",
+    "source": "UK Department for Work and Pensions · Milburn Review",
+    "headline": "Structural problems in youth transitions predate widespread AI adoption",
+    "source_url": "https://www.gov.uk/government/publications/young-people-and-work-interim-report"
+  },
+  {
+    "id": "mdls-uk-digital-living-standard-2025",
+    "date": "2025",
+    "source": "Minimum Digital Living Standard research team",
+    "headline": "Access to digital capability includes devices, connectivity and support, not simply AI availability",
+    "source_url": "https://www.goodthingsfoundation.org/policy-and-research/research-and-evidence/research-2025/mdls-full-report"
+  },
+  {
+    "id": "oecd-eu-ai-literacy-framework-2026",
+    "date": "2026-06-18",
+    "source": "OECD / European Commission",
+    "headline": "AI literacy covers evaluation, creation and human judgment rather than tool use alone",
+    "source_url": "https://doi.org/10.1787/65cd27d4-en"
+  },
+  {
+    "id": "ada-hillman-preparing-young-2026",
+    "date": "2026-11-09",
+    "source": "Ada Lovelace Institute",
+    "headline": "AI could thin the learning opportunities that make junior work developmental",
+    "source_url": "https://www.adalovelaceinstitute.org/blog/preparing-young-people-for-work-in-the-ai-era/"
+  },
+  {
+    "id": "lightcast-entry-level-gap-2026-10",
+    "date": "2026-10-14",
+    "source": "Lightcast",
+    "headline": "Entry-level advertisements stagnated relative to all advertised jobs since 2019",
+    "source_url": "https://lightcast.io/resources/blog/entry-level-jobs-otj"
+  },
+  {
+    "id": "lightcast-ai-skills-seniority-2026-10",
+    "date": "2026-10-19",
+    "source": "Lightcast",
+    "headline": "AI-skilled senior advertisements outnumber junior advertisements four to one",
+    "source_url": "https://lightcast.io/resources/blog/tracking-ai-workforce-trends-october-2026-update"
+  },
+  {
+    "id": "bls-employment-oct2026-youth",
+    "date": "2026-11-06",
+    "source": "US Bureau of Labor Statistics",
+    "headline": "US payroll growth improved while unemployment for ages 20–24 remained higher",
+    "source_url": "https://www.bls.gov/news.release/archives/empsit_11062026.htm"
+  },
+  {
+    "id": "bls-jolts-sep2026",
+    "date": "2026-11-03",
+    "source": "US Bureau of Labor Statistics",
+    "headline": "US job openings and hiring flows changed little in September",
+    "source_url": "https://www.bls.gov/news.release/jolts.htm"
+  },
+  {
+    "id": "ons-uk-neet-2026-q2",
+    "date": "2026-08-27",
+    "source": "Office for National Statistics",
+    "headline": "UK young people not in education, employment or training remained near one million",
+    "source_url": "https://www.ons.gov.uk/employmentandlabourmarket/peoplenotinwork/unemployment/bulletins/youngpeoplenotineducationemploymentortrainingneet/august2026"
+  },
+  {
+    "id": "indeed-us-pay-ai-seniority-2026",
+    "date": "2026-09-17",
+    "source": "Indeed Hiring Lab",
+    "headline": "Pay-growth differences by AI exposure are largest in senior advertised roles",
+    "source_url": "https://hiringlab.indeed.com/2026/09/17/ai-exposure-isnt-squeezing-advertised-pay-in-the-us-its-boosting-it/"
+  },
+  {
+    "id": "indeed-uk-snapshot-oct2026",
+    "date": "2026-10-26",
+    "source": "Indeed Hiring Lab",
+    "headline": "UK advertised job demand remains far below its pre-pandemic benchmark",
+    "source_url": "https://hiringlab.indeed.com/uk/blog/2026/10/26/uk-labour-market-snapshot-october-2026/"
+  },
+  {
+    "id": "linkedin-workforce-us-oct2026",
+    "date": "2026-10-27",
+    "source": "LinkedIn Economic Graph",
+    "headline": "LinkedIn hiring rose monthly but remained below both 2025 and 2020 benchmarks",
+    "source_url": "https://pulse.linkedin.com/research-and-trends/workforce-reports/linkedin-workforce-report-october-2026"
+  },
+  {
+    "id": "linkedin-ai-opportunities-oct2026",
+    "date": "2026-10-27",
+    "source": "LinkedIn Economic Graph",
+    "headline": "Specialist junior AI hiring grew even as broader recruitment remained subdued",
+    "source_url": "https://news.linkedin.com/2026/linkedin-data-shows-where-opportunity-is-emerging-as-work-changes"
+  },
+  {
+    "id": "burning-glass-beyond-binary-2026",
+    "date": "2026-01",
+    "source": "Burning Glass Institute",
+    "headline": "Automation and augmentation pressures can coexist inside the same occupation",
+    "source_url": "https://www.burningglassinstitute.org/research/beyond-the-binary-how-automation-and-augmentation-are-combining-to-reshape-work"
+  }
+]

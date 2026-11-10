@@ -1,0 +1,46 @@
+[
+  {
+    "id": "eurofound-algorithmic-management-2026",
+    "title": "Algorithmic management is associated with more work pressure and more access to learning",
+    "source": "Eurofound",
+    "date": "2026-10-29 (survey: 2024)",
+    "url": "https://www.eurofound.europa.eu/en/publications/all/algorithmic-management-in-european-workplaces",
+    "classification": "Firm adoption & work design",
+    "tier": "Tier 2",
+    "status": "Added",
+    "note": "Cross-sectional employee reports, not longitudinal or causal evidence. Computer-based management can be conventional software rather than generative AI. Associations may reflect characteristics of more digitally advanced workplaces; under-35 is not an entry-level worker measure."
+  },
+  {
+    "id": "oecd-algorithmic-management-survey-2025",
+    "title": "Managers perceive benefits and governance risks from algorithmic management",
+    "source": "OECD · AI and Work",
+    "date": "2025-02-06",
+    "url": "https://doi.org/10.1787/287c13c4-en",
+    "classification": "Firm adoption & work design",
+    "tier": "Tier 2",
+    "status": "Added",
+    "note": "Employer/manager perception survey; not measured worker outcomes, firm performance, graduate hiring or generative AI deployment. Countries, survey designs and units differ from Eurofound; prevalence figures are not directly comparable."
+  },
+  {
+    "id": "mgi-agents-robots-skills-2025",
+    "title": "Technical automation potential and projected adoption are not observed employment displacement",
+    "source": "McKinsey Global Institute",
+    "date": "2025-11-25",
+    "url": "https://www.mckinsey.com/mgi/our-research/agents-robots-and-us-skill-partnerships-in-the-age-of-ai",
+    "classification": "Work design & measurement",
+    "tier": "Tier 3",
+    "status": "Added",
+    "note": "Technical feasibility, not observed adoption, labor displacement or learning outcomes. AI-mediated skill/activity mappings and optimistic workflow/value assumptions were not independently reproduced here. The appendix is part of this same research source, not a separate observation."
+  },
+  {
+    "id": "deepmind-organizing-intelligence-2026",
+    "title": "Organizational coordination may change employment and wages in non-linear ways",
+    "source": "Imas, Koh & Legg · Google DeepMind",
+    "date": "2026-10-29",
+    "url": "https://arxiv.org/abs/2611.05417",
+    "classification": "Theoretical scenarios",
+    "tier": "Tier 3",
+    "status": "Added",
+    "note": "Stylized economic model with parameterized capability, coordination and competitive-market assumptions. No empirical test of youth outcomes, no forecast of dates or probability of structural shifts. Employment figures referenced in its literature discussion are not new independent observations."
+  }
+]

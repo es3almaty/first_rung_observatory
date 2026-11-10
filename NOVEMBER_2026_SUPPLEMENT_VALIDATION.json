@@ -1,0 +1,16 @@
+{
+  "desktop": {
+    "ledger": 59,
+    "selected_stream": 5,
+    "javaScript_errors": [],
+    "horizontal_overflow": false,
+    "supplement_section": true
+  },
+  "mobile": {
+    "ledger": 59,
+    "selected_stream": 5,
+    "javaScript_errors": [],
+    "horizontal_overflow": false,
+    "supplement_section": true
+  }
+}

@@ -580,3 +580,20 @@ dialog::backdrop { background: rgba(4, 17, 30, 0.65); backdrop-filter: blur(4px)
 @media (max-width: 900px) { .research-update-grid { grid-template-columns: repeat(2, minmax(0,1fr)); } .research-update-caution { grid-template-columns: 1fr; gap: 12px; } .research-update-caution a { grid-column: 1; } }
 @media (max-width: 560px) { .research-update-grid { grid-template-columns: 1fr; } .research-update-card { padding: 22px 20px; } .research-update-caution { padding: 20px; } }
 /* OCT2026_END */
+
+/* November 2026 editorial update: visually prioritize the latest synthesis, retain October history. */
+.november-update { padding-top: 72px; background: #f4f8fc; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.november-update .research-update-card { border-top-color: #2e597d; }
+.november-update .research-update-card .research-metric { font-size: clamp(24px, 2.25vw, 35px); }
+.source-item { display: block; }
+.source-links { list-style: none; padding: 8px 0 0; margin: 0; display: grid; gap: 7px; }
+.source-links li { border-top: 1px solid var(--line); padding-top: 7px; }
+.source-links a { font-size: 11px; line-height: 1.45; color: var(--blue); display: inline-block; overflow-wrap: anywhere; }
+.source-item h3 { overflow-wrap: anywhere; }
+
+/* November supplementary evidence: clear analytical separation from observed labor series. */
+.supplementary-update { padding-top: 70px; padding-bottom: 72px; background: #fff; border-bottom: 1px solid var(--line); }
+.supplementary-update .research-update-card { border-top-color: #476b76; }
+.supplementary-update .research-update-card a + a { margin-top: 8px; }
+.supplementary-update .research-update-card .research-metric { font-size: clamp(24px, 2.3vw, 36px); }
+.supplementary-update .research-update-caution { background: #f2f6f7; }

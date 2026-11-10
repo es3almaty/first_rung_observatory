@@ -1,0 +1,12 @@
+{
+  "project": "First Rung Observatory",
+  "release": "2026-11-10-november-supplement",
+  "expected_source_count": 59,
+  "previous_source_count": 34,
+  "files_at_repository_root": true,
+  "netlify_publish_directory": ".",
+  "canonical_site": "https://firstrung.ewansimpson.org/",
+  "source_documentation": "NOVEMBER_2026_SUPPLEMENT_RELEASE_NOTES.md",
+  "preserved_vintage": "August 2026 trend/recovery data",
+  "note": "Static site; no build command. No claim of live deployment or updated trends."
+}

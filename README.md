@@ -1,6 +1,6 @@
 # First Rung Observatory
 
-Complete static Observatory website, including the August 2026 baseline and October 2026 evidence update (34 records).
+Complete static Observatory website, including the August 2026 baseline, October 2026 evidence update (34 records), and 10 November 2026 review (55 observations).
 
 ## Deploy
 
@@ -82,3 +82,20 @@ The intended canonical hostname is https://firstrung.ewansimpson.org/. This code
 ## October 2026 release
 
 This release is a complete, directly deployable static site, not an installation patch. No local programming is required. On GitHub, upload the extracted contents to the root of the existing repository (preserve the assets/ and data/ directories). If deploying manually to Netlify, extract the ZIP and drag the complete site folder to the Netlify deploy area. The intended canonical hostname is https://firstrung.ewansimpson.org/; setting the DNS and Netlify custom domain is a separate step.
+
+## November 10, 2026 evidence and interpretation update
+
+The live repository snapshot arrived with **34 evidence observations** and three separate August-vintage trend/recovery files. This release **preserves all 34 existing records verbatim** and appends **21 new observations**, reaching **55 total**. These are observations, not 55 statistically independent studies. The new records cover:
+
+- **10 PDFs from the skills archive plus the Ada Lovelace Institute commentary** (11 entries). Six items belong to the same NFER Skills Imperative research family, so they must not be counted as six independent confirmations. The uploaded original NFER Working Paper 3 is version-sensitive: use NFER's corrected Working Paper 3b/tables for projections. The Milburn Review's June amendments/August annex correction are noted.
+- **10 additional primary-site research and labor-market observations** from BLS (2), ONS NEET (1), Lightcast (2), Indeed (2), LinkedIn (2) and Burning Glass Institute (1). The October ONS vacancies snapshot was already record `ons-uk-vacancies-oct2026` and was not duplicated. Underlying platform datasets may overlap with other papers already in the ledger.
+
+The homepage now leads with a concise November synthesis while retaining the detailed October research update and the August 2026 original reading. Its editorial emphasis is mixed signals, partial identification, rival explanations, and developmental access. It continues to allow proportionate responses under uncertainty without presenting an AI causal share or composite risk score.
+
+**Not updated:** `data/trends.json`, `data/trends.csv`, `data/recovery.json`. Chart vintages remain August 2026, with this caveat visible in the UI. The public `data/evidence.csv` has been regenerated exactly from `data/evidence.json`. Existing IDs are unchanged, and source links now enumerate each publication within shared publisher groups.
+
+**Checks:** exact-ID and canonical-URL de-duplication against repository records; JSON/CSV row-level parity; existing-record immutability; static data-file preservation; JavaScript syntax; basic HTML references. New source assessment is curated rather than exhaustive and does not constitute independent methodological replication. See `NOVEMBER_2026_SOURCE_MANIFEST.json` for new entries.
+
+## Selective November 2026 supplementary intake (59 observations)
+
+Four distinct sources were added after reviewing eleven uploaded PDF files; see `NOVEMBER_2026_SUPPLEMENT_RELEASE_NOTES.md` and `NOVEMBER_2026_SUPPLEMENT_RECONCILIATION.csv`. The McKinsey appendix is part of the parent study. The original 55 evidence observations and August chart datasets are preserved, and the supplemental interpretation is separately labeled. The site reports observed associations, manager perceptions, modeled technical potential and economic theory as different evidentiary categories.
