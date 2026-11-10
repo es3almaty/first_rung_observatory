@@ -1,0 +1,28 @@
+{
+  "reviewed_on": "2026-11-10",
+  "candidates": 18,
+  "new_records": 17,
+  "existing_records": 59,
+  "result_records": 76,
+  "source_ids": [
+    "emanuel-harrington-pallais-proximity-2026",
+    "frank-ai-exposed-before-chatgpt-2026",
+    "eig-iscenko-curto-millet-ladder-2026",
+    "nyfed-audoly-guerin-topa-postings-2026",
+    "yale-budget-lab-sdid-oct2026",
+    "epi-gould-fast-class-of-2026",
+    "hosseini-lichtinger-seniority-bias-2026",
+    "klein-teeselink-uk-genai-2025",
+    "dallas-fed-atkinson-yamco-2026",
+    "anthropic-massenkoff-mccrory-observed-exposure-2026",
+    "humlum-vestergaard-still-waters-2026",
+    "garicano-rayo-training-ai-2025",
+    "ide-intergenerational-knowledge-2026",
+    "pwc-global-ai-jobs-barometer-2026",
+    "northeastern-ai-in-hiring-room-2026",
+    "dsit-linkedin-uk-snapshot-2026",
+    "pwc-uk-youth-employment-index-2025"
+  ],
+  "excluded": "UK government January 2026 capability assessment as overlapping institutional synthesis",
+  "note": "Ledger observations are not independent empirical tests."
+}

@@ -1,12 +1,12 @@
 {
   "project": "First Rung Observatory",
-  "release": "2026-11-10-november-supplement",
-  "expected_source_count": 59,
-  "previous_source_count": 34,
+  "release": "2026-11-10-closing-audit",
+  "expected_source_count": 76,
+  "previous_source_count": 59,
   "files_at_repository_root": true,
   "netlify_publish_directory": ".",
   "canonical_site": "https://firstrung.ewansimpson.org/",
-  "source_documentation": "NOVEMBER_2026_SUPPLEMENT_RELEASE_NOTES.md",
+  "source_documentation": "NOVEMBER_2026_CLOSING_AUDIT_NOTES.md",
   "preserved_vintage": "August 2026 trend/recovery data",
-  "note": "Static site; no build command. No claim of live deployment or updated trends."
+  "note": "18 sources screened: 17 distinct records added, one synthesis not separately registered; earlier releases and August 2026 trend series preserved; no claim of live deployment."
 }

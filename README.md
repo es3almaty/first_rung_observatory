@@ -1,3 +1,5 @@
+> **Current release:** 10 November 2026 closing audit, 76 source observations. The 34-record October baseline, 59-record November supplement, and August trend data are retained. See `NOVEMBER_2026_CLOSING_AUDIT_NOTES.md` for source screening and limitations.
+
 # First Rung Observatory
 
 Complete static Observatory website, including the August 2026 baseline, October 2026 evidence update (34 records), and 10 November 2026 review (55 observations).

@@ -1,0 +1,17 @@
+{
+  "date": "2026-11-10",
+  "record_count": 76,
+  "old_count": 59,
+  "new_count": 17,
+  "json_csv_exact_match": true,
+  "unique_ids": true,
+  "historical_charts_unchanged": true,
+  "root_structure_correct": true,
+  "zip_integrity": "passed",
+  "desktop_and_mobile_inline_smoke": "passed",
+  "java_script_exceptions": 0,
+  "horizontal_overflow": false,
+  "local_http_browser": "blocked by environment",
+  "live_netlify_deployment": "not tested",
+  "source_verification": "selected primary sources/versions reviewed; no independent data replication"
+}
